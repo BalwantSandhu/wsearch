@@ -1,0 +1,13 @@
+.box {
+  background-color: white;
+  color: #363636;
+}
+
+.input {
+  background-color: white;
+  color: #363636;
+}
+
+.input::placeholder {
+  color: #7a7a7a;
+}

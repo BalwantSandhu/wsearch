@@ -12,6 +12,7 @@ export class PageListComponent {
 }
 
 export interface WikiPages{
+  pageid: number;
   title: string;
   wordcount: number;
   snippet: string;

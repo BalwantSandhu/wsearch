@@ -3,10 +3,11 @@ import { RouterOutlet } from '@angular/router';
 import { SearchBarComponent } from "./search-bar/search-bar.component";
 import { PageListComponent, WikiPages } from "./page-list/page-list.component";
 import { WikipediaService } from './wikipedia.service';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, SearchBarComponent, PageListComponent],
+  imports: [RouterOutlet, SearchBarComponent, PageListComponent, NgIf],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
