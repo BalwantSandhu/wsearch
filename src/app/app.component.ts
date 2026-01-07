@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { SearchBarComponent } from "./search-bar/search-bar.component";
-import { PageListComponent, WikiPages } from "./page-list/page-list.component";
-import { WikipediaService } from './wikipedia.service';
+import { PageListComponent } from "./page-list/page-list.component";
+import { WikiPages, WikipediaService } from './wikipedia.service';
 import { NgIf } from '@angular/common';
 
 @Component({
@@ -20,8 +20,8 @@ export class AppComponent {
   }
 
   onTerm(term:string){
-    this.wikipedia.search(term).subscribe((response: any) => {
-      this.pages = response.query.search;
+    this.wikipedia.search(term).subscribe((responsePages) => {
+      this.pages = responsePages;
     })
   }
 } 

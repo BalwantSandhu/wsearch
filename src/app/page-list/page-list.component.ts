@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { NgForOf } from "@angular/common";
+import { WikiPages } from '../wikipedia.service';
 
 @Component({
   selector: 'app-page-list',
@@ -11,9 +12,4 @@ export class PageListComponent {
   @Input() pages: WikiPages[] = [];
 }
 
-export interface WikiPages{
-  pageid: number;
-  title: string;
-  wordcount: number;
-  snippet: string;
-}
+
